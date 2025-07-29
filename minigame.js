@@ -49,9 +49,15 @@ function setReward(rewards,index) {
 }
 //---
 function getMinigames() {
+    let minigameData;
     fetch('./data/all-vs-all-minigames.txt')
         .then(response => response.text())
-        .then(text => console.log(text));
+        .then(text => minigameData = text.split(","))
+        .catch(error => console.error("Error fetching file:", error));
+
+    if (minigameData === undefined){
+        
+    }
 }
 
 
