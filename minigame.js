@@ -25,10 +25,10 @@ const spinner = {
 minigameButtons.elements.forEach(addClickCallback);
 
 function addClickCallback(button,index) {
-    button.addEventListener("pointerdown",event => handlePointerDown(event,minigameButtons,index),passive=true);
+    button.addEventListener("pointerdown",event => handleButtonPress(event,minigameButtons,index),passive=true);
 }
 
-function handlePointerDown(event,minigameButtons,index) {
+function handleButtonPress(event,minigameButtons,index) {
     if (spinner.isSpinning) {return};
     minigameButtons.currentType.innerHTML = minigameButtons.description[index];
     minigameButtons.currentIndex = index; 
