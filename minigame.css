@@ -1,0 +1,65 @@
+#minigames{
+    display: flex;
+    gap: 10px
+}
+
+#spinner-container{
+    display: grid;
+    place-items: center;
+    padding: 20px;
+}
+
+#spinner{
+    border: solid black 5px;
+    width: 150px;
+    height: 800px;
+}
+
+
+#minigame-info{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#game-selection{
+    display: flex;
+    gap: 40px
+}
+
+
+#game-types{
+    display: grid;
+    grid-template-columns: 100px 100px;
+    gap: 10px;
+}
+
+
+button{
+    font-family: partyFont;
+    font-size: 25pt;
+}
+
+#game-rewards{
+    display: grid;
+    grid-template-columns: repeat(2,180px);
+    grid-template-rows: 1fr 1fr 1fr;
+    gap:10px 40px;
+    grid-auto-flow: column;
+    
+    border: solid black 5px;
+    padding: 0px 10px;
+}
+
+.reward{
+    display: flex;
+    align-items: baseline;
+}
+
+.position{
+    width: 80px;
+}
+
+.coin-emoji{
+    height: 30px;
+}

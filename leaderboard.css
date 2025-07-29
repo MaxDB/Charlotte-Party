@@ -1,20 +1,9 @@
 
 
-main {
-    display: flex;
-    height: 90vmin;
-    padding: 4vmin;
-}
-
-.section {
-    flex-grow: 1;
-    flex-basis: 50%;
-    outline: solid red 2px;
-}
 
 #leaderboard {
     display: grid;
-    grid-template-columns: 90px 700px;
+    grid-template-columns: 150px 700px;
     grid-template-rows: repeat(6,110px);
     place-items: center left;
     gap: 5% 0%;
@@ -84,6 +73,11 @@ main {
     display: flex;
     justify-content: right;
     align-items: center;
+    font-size: 60pt;
+}
+
+.ordinal{
+    font-size: 70pt;
 }
 
 

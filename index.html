@@ -1,13 +1,14 @@
 <html>
     <head>
-        <link rel="stylesheet" href="./style.css" />
-        <link rel="stylesheet" href="./font.css" />
+        <link rel="stylesheet" href="./general.css" />
+        <link rel="stylesheet" href="./leaderboard.css" />
+        <link rel="stylesheet" href="./minigame.css" />
     </head>
     <body>
         <main>
             <div class="section">
                 <div id="leaderboard">
-                    <div class="ordinal">1.</div>
+                    <div class="ordinal">1<sup>st</sup></div>
                     <div class="player">
                         <img class="character" src="./assets/star.png"/>
                         <div class="star-container">
@@ -26,7 +27,7 @@
                         </div>
                     </div>
 
-                    <div class="ordinal">2.</div>
+                    <div class="ordinal">2<sup>nd</sup></div>
                     <div class="player">
                         <img class="character" src="./assets/star.png"/>
                         <div class="star-container">
@@ -45,7 +46,7 @@
                         </div>
                     </div>
 
-                    <div class="ordinal">3.</div>
+                    <div class="ordinal">3<sup>rd</sup></div>
                     <div class="player">
                         <img class="character" src="./assets/star.png"/>
                         <div class="star-container">
@@ -64,7 +65,7 @@
                         </div>
                     </div>
 
-                    <div class="ordinal">4.</div>
+                    <div class="ordinal">4<sup>th</sup></div>
                     <div class="player">
                         <img class="character" src="./assets/star.png"/>
                         <div class="star-container">
@@ -83,7 +84,7 @@
                         </div>
                     </div>
 
-                    <div class="ordinal">5.</div>
+                    <div class="ordinal">5<sup>th</sup></div>
                     <div class="player">
                         <img class="character" src="./assets/star.png"/>
                         <div class="star-container">
@@ -102,7 +103,7 @@
                         </div>
                     </div>
 
-                    <div class="ordinal">6.</div>
+                    <div class="ordinal">6<sup>th</sup></div>
                     <div class="player">
                         <img class="character" src="./assets/star.png"/>
                         <div class="star-container">
@@ -122,9 +123,62 @@
                     </div>
                 </div>
             </div>
-            <div class="section">2</div>
+            <div class="section" id="minigames">
+                <div id="spinner-container">
+                    <div id="spinner"></div>
+                </div>
+                <div id="minigame-info">
+                    <div id="game-selection">
+                        <div class="game-section">
+                            <h1>Type: </h1>
+                            <div id="game-types">
+                                <button type="button" class="minigame-button" id="all-v-all">all vs all</button>
+                                <button type="button" class="minigame-button" id="1-v-5">1 vs 5</button>
+                                <button type="button" class="minigame-button" id="two-teams">two teams</button>
+                                <button type="button" class="minigame-button" id="three-teams">three teams</button>
+                            </div>
+                        </div>
+                        <div class="game-section">
+                            <h1 id="minigame-type">all vs all</h1>
+                            <div id="game-rewards">
+                                <div class="reward">
+                                    <div class="position">1<sup>st</sup>:</div>
+                                    <div class="reward-value">1x</div>
+                                    <img class="coin-emoji" src="./assets/coin.png"/>
+                                </div>
+                                <div class="reward">
+                                    <div class="position">2<sup>nd</sup>:</div>
+                                    <div class="reward-value">1x</div>
+                                    <img class="coin-emoji" src="./assets/coin.png"/>
+                                </div>
+                                <div class="reward">
+                                    <div class="position">3<sup>rd</sup>:</div>
+                                    <div class="reward-value">1x</div>
+                                    <img class="coin-emoji" src="./assets/coin.png"/>
+                                </div>
+                                <div class="reward">
+                                    <div class="position">4<sup>th</sup>:</div>
+                                    <div class="reward-value">1x</div>
+                                    <img class="coin-emoji" src="./assets/coin.png"/>
+                                </div>
+                                <div class="reward">
+                                    <div class="position">5<sup>th</sup>:</div>
+                                    <div class="reward-value">1x</div>
+                                    <img class="coin-emoji" src="./assets/coin.png"/>
+                                </div>
+        
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h1>Minigame</h1>
+                        <p>minigame description</p>
+                    </div>
+                </div>
+            </div>
         </main>
 
-        <script src="leaderboard.js"></script>
+        <script src="./leaderboard.js"></script>
+        <script src="./minigame.js"></script>
     </body>
 </html>

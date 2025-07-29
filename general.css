@@ -9,10 +9,15 @@ body{
     font-weight: lighter;
 }
 
-.ordinal{
-    font-size: 70pt;
+
+main {
+    display: flex;
+    height: 90vmin;
+    padding: 4vmin;
 }
 
-.value{
-    font-size: 60pt;
+.section {
+    flex-grow: 1;
+    flex-basis: 50%;
+    outline: solid red 2px;
 }
