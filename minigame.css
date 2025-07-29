@@ -13,6 +13,30 @@
     border: solid black 5px;
     width: 150px;
     height: 800px;
+    
+    position: relative;
+    
+}
+
+#spin-animation{
+    position: relative;
+    opacity: 0;
+
+    animation-duration: 1s;
+    animation-name: vibrate;
+    animation-play-state: paused;
+    animation-direction: alternate;
+    animation-iteration-count: 2;
+}
+
+@keyframes vibrate{
+    from{
+        top:0%;
+    }
+
+    to{
+        top: 95%;
+    }
 }
 
 
