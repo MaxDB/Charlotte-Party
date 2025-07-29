@@ -54,7 +54,7 @@ function getMinigames() {
         .then(response => response.text())
         .then(text => minigameData = text.split(","))
         .catch(error => console.error("Error fetching file:", error));
-
+    console.log(minigameData)
     if (minigameData === undefined){
         
     }
