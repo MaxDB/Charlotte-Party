@@ -71,7 +71,7 @@ function loadMinigames(name) {
         //.then(text => console.log(text))
         //.catch(error => console.error("Error fetching file:", error));
     
-        let text = ` 
+        const text = ` 
             game-1, ${name} -description-1;
             game-2, ${name} -description-2;
             game-3, ${name} -description-3;
@@ -91,8 +91,9 @@ function loadMinigames(name) {
 
 function spinWheel(spinner,index) {
     const minigames = spinner.minigames[index];
+    if (minigames.length == 0) {return};
     const gameIndex = Math.floor(Math.random() * minigames.length);
-    const [gameName,gameDescription] = minigames[gameIndex];
+    const [gameName,gameDescription] = minigames.splice(gameIndex, 1)[0];
 
     spinner.gameName = gameName;
     spinner.gameDescription = gameDescription;
