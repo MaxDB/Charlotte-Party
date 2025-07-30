@@ -4,7 +4,7 @@
 #leaderboard {
     display: grid;
     grid-template-columns: 150px 700px;
-    grid-template-rows: repeat(6,125px);
+    grid-template-rows: repeat(6,120px);
     place-items: center left;
     gap: 5% 0%;
 
