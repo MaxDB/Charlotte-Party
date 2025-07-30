@@ -4,7 +4,7 @@
 #leaderboard {
     display: grid;
     grid-template-columns: 150px 700px;
-    grid-template-rows: repeat(6,110px);
+    grid-template-rows: repeat(6,125px);
     place-items: center left;
     gap: 5% 0%;
 
@@ -22,9 +22,6 @@
     height: 100%;
 
     border-radius: 10px;
-
-    &:nth-child(1 of .player){background: blue;};
-    &:nth-child(2 of .player){background: red;};
 }
 
 
@@ -84,6 +81,28 @@
 .character{
     border-radius: 10px;
     border: solid black 3px;
-    height:100%;
+    height:116px;
+    width: 116px;
+    aspect-ratio: 1;
+    background: white;
 }
 
+#dk{
+    background: #fdbb81;
+    border: solid #843725 5px;
+}
+
+#bowser{
+    background: #fab816;
+    border: solid #ef4023 5px;
+}
+
+#cow{
+    background: #cac4ce;
+    border: solid #58575d 5px;
+}
+
+#toad{
+    background: #f9d8b5;
+    border: solid #e60115 5px;
+}
