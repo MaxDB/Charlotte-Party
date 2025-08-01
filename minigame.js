@@ -152,6 +152,8 @@ function startSpinning(spinner) {
     spinner.isSpinning = true;
     spinner.element.style.opacity = 1;
     spinner.element.style.animationPlayState = "running";
+    const audio = document.querySelector("#spin-audio");
+    audio.play();
 
 }
 

@@ -94,9 +94,31 @@ function handlePointerDown(event,type) {
     value += inc;
     type.valueElement.innerHTML = value.toString();
     type.value = value;
-    if (inc > 0 && type.type==="star"){
-        audio = document.querySelector("#star-audio");
-        audio.play();
+    if (inc > 0){
+        if (type.type==="star") {
+            const audio = document.querySelector("#star-audio");
+            audio.play();
+        } else if (type.type ==="coin") {
+            const audio = document.querySelector("#coin-audio");
+            audio.play();
+        }
+    }
+
+    if (inc < 0){
+        if (type.type==="star"){
+            const audioIndex = Math.floor(Math.random() * 3);
+            let audioID;
+            if (audioIndex === 0) {
+                audioID = "#lose-one-audio";
+            } else if (audioIndex === 1){
+                audioID = "#lose-two-audio";
+            } else if (audioIndex === 2){
+                audioID = "#lose-three-audio";
+            }
+            const audio = document.querySelector(audioID);
+            audio.play();
+            
+        }
     }
 }
 
