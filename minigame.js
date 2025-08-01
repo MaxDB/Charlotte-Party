@@ -2,9 +2,8 @@ const minigameButtons = {
     elements: document.querySelectorAll(".minigame-button"),
     description: [
         "all vs all",
-        "1 vs 5",
-        "two teams",
-        "three teams"
+        "1 vs 3",
+        "two teams"
     ],
     currentIndex: 0,
     currentType: document.querySelector("#minigame-type"),

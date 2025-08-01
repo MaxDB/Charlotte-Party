@@ -67,7 +67,7 @@ button{
 #game-rewards{
     display: grid;
     grid-template-columns: repeat(2,180px);
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap:10px 40px;
     grid-auto-flow: column;
     
