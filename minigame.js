@@ -74,30 +74,48 @@ function loadMinigames(name) {
             Camera ready,Can you find this photo in Bowser F.'s domain;
             Shy Guy Says, Follow the flags or DIE;
             Ass to grass, How Joe can you go!? Stand up fully COMMA plant ass on grass COMMA repeat to win!;
-            Xray pay day, Memorise whot's on the cards and don't grag the bomb!;
+            Xray pay day, Memorise what's on the cards and don't grab the bomb!;
             Bowser big blast, Don't get blasted!;
             Stones Joe, Toss your stone win a prize! Get your rocks in prize zones to win;
             Prime Cut, Cut the biscuit perfectly!;
             Sticky hands showdown, Grab the cards you wont - don't get shot;
             Wario Whacky Wager, Bet on if you'll get the trivia question right;
-            Dice AMPERSAND Dash, Roll all of the symbols to win (bomb NOT EQUAL shot);
-            Foo me once, memorize the path or DIE;
-            Nut cases, find the most NUTS;
+            Dice & Dash, Roll all of the symbols to win (bomb NOT EQUAL shot);
+            Foo me once, Memorise the path or DIE;
+            Nut cases, Find the most NUTS;
             Don't look, After the count COMMA don't face your face in the direction of the host!;
             Domination, Tap fast? Yeah COMMA I do that. Tap phone screen most to win;
             Memory sketch match, Recreate Charlotte's WACKY drawing;
             Sticky Slap Spinout, Spin around for 5 seconds COMMA grab the win in the shortest time;
             Honey Comb Havoc, You already know;
             Noise Mimic, Host votes on accuracy;
-            Max I Don't Drink AMPERSAND Drive, Mario race. Finish your drink before the line;
+            Max I Don't Drink & Drive, Mario race. Finish your drink before the line;
             Aaron Fingers, Its the drinking game fingers;
             Dexters Cheeky Smile, Higher or lower but with SHOTS;
-            Charlotte F(ish), Fish Fillet! One flips 4 cups COMMA rest work sequentually flip 4 between!
+            Charlotte F(ish), Fish Fillet! One flips 4 cups COMMA rest work sequentually flip 4 between!;
+            Russian Roulette, Bunch o'shots COMMA but only one is a blast!;
+            Max at the races, Horse race! Place your bets! Roll up roll up! Do the bet then do card flip after bet cards are horses and suits are for the winner of the card game!
             `;
         } else if (name==="one-vs-five"){
-            text = "1,des1v3";
+            text = `
+            Hide & seek, Put tokens under cups and HIDE or face penalty;
+            Bowser Bogus Bingo, Don't get a bingo;
+            Ass grass Redux, One person pressups COMMA rest ass to grass! Higher total wins coins
+            `;
         } else if (name==="two-teams"){
-            text = "1,desctwoteams";
+            text = `
+            Tricky Tum Table, To tum or not to tum: get the coins not the bombs as a team;
+            Donkey Conga, Let's play Taiko;
+            Regular Arm Wrestle, Do the thing;
+            Slappy Go-round, Tortilla but stickyhands;
+            Mushroom Medic, Wearing noise cancelling headphones read your lips;
+            Don't make me laugh, The game;
+            Cake Factory, In pairs drink the drink then flip then drink + flip!;
+            Straw by Straw, Move water from source to sink using only straws;
+            Rally Race, Blind folded racer! Sighted passenger? Who wins?;
+            Handcar Havoc, Decant drink into shot glasses SLAM shot. Race to the bottom!;
+            Imagery Recreation to the MAX, Blindfolded in pairs recreate the image
+            `;
         } else {
             text = ` 
             game-1, ${name} -description-1;
@@ -112,7 +130,7 @@ function loadMinigames(name) {
             game-10, ${name} -description-10
             `
         };
-        minigameData = text.replace(/(\r\n|\r|\n| )/g,"").split(";")
+        minigameData = text.replace(/(\r\n|\r|\n)/g,"").split(";")
             .map(game => game.split(","));
     
     return minigameData
