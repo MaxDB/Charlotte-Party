@@ -63,12 +63,12 @@ function getMinigames() {
 }
 
 function loadMinigames(name) {
-    const filename = "./data/" + name + "-minigames.txt";
+    // const filename = "./data/" + name + "-minigames.txt";
     // fetch(filename)
        // .then(response => response.text())
         //.then(text => console.log(text))
         //.catch(error => console.error("Error fetching file:", error));
-        let text
+        let text;
         if (name==="all-vs-all"){
             text = "1,descava";
         } else if (name==="one-vs-five"){
