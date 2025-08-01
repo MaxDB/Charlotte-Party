@@ -8,7 +8,8 @@ function formatPlayers(playerElement,index) {
         value: 0,
         valueElement: coinCounter.querySelector(".value"),
         changeElement: coinCounter.querySelector(".increment"),
-        arrows: coinCounter.querySelectorAll(".arrow")
+        arrows: coinCounter.querySelectorAll(".arrow"),
+        type: "coin"
     }
 
     const starCounter = playerElement.querySelector(".star-container");
@@ -16,7 +17,8 @@ function formatPlayers(playerElement,index) {
         value: 0,
         valueElement: starCounter.querySelector(".value"),
         changeElement: starCounter.querySelector(".increment"),
-        arrows: starCounter.querySelectorAll(".arrow")
+        arrows: starCounter.querySelectorAll(".arrow"),
+        type: "star"
     }
     
     playerElement.style.gridColumn = "2/3";
@@ -81,17 +83,21 @@ function handlePointerDown(event,type) {
     let value = parseInt(type.valueElement.innerHTML);
 
     let inc = 0;
-    if (event.button === 0) {inc = 1}
-    else if (event.button === 2) {inc = 5}
+    if (event.button === 2) {inc = 5}
+    else {inc = 1}
     
     if (topArrow.style.visibility === "visible") {
-        value += inc;
+        inc *= 1;
     } else if (bottomArrow.style.visibility === "visible") {
-        value -= inc; 
+        inc *= -1; 
     } else {return}
-    
+    value += inc;
     type.valueElement.innerHTML = value.toString();
     type.value = value;
+    if (inc > 0 && type.type==="star"){
+        audio = document.querySelector("#star-audio");
+        audio.play();
+    }
 }
 
 function evaluateLeaderboard(event,playerID,players) {

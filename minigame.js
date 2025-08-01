@@ -70,7 +70,30 @@ function loadMinigames(name) {
         //.catch(error => console.error("Error fetching file:", error));
         let text;
         if (name==="all-vs-all"){
-            text = "1,descava";
+            text = `
+            Camera ready,Can you find this photo in Bowser F.'s domain;
+            Shy Guy Says, Follow the flags or DIE;
+            Ass to grass, How Joe can you go!? Stand up fully COMMA plant ass on grass COMMA repeat to win!;
+            Xray pay day, Memorise whot's on the cards and don't grag the bomb!;
+            Bowser big blast, Don't get blasted!;
+            Stones Joe, Toss your stone win a prize! Get your rocks in prize zones to win;
+            Prime Cut, Cut the biscuit perfectly!;
+            Sticky hands showdown, Grab the cards you wont - don't get shot;
+            Wario Whacky Wager, Bet on if you'll get the trivia question right;
+            Dice AMPERSAND Dash, Roll all of the symbols to win (bomb NOT EQUAL shot);
+            Foo me once, memorize the path or DIE;
+            Nut cases, find the most NUTS;
+            Don't look, After the count COMMA don't face your face in the direction of the host!;
+            Domination, Tap fast? Yeah COMMA I do that. Tap phone screen most to win;
+            Memory sketch match, Recreate Charlotte's WACKY drawing;
+            Sticky Slap Spinout, Spin around for 5 seconds COMMA grab the win in the shortest time;
+            Honey Comb Havoc, You already know;
+            Noise Mimic, Host votes on accuracy;
+            Max I Don't Drink AMPERSAND Drive, Mario race. Finish your drink before the line;
+            Aaron Fingers, Its the drinking game fingers;
+            Dexters Cheeky Smile, Higher or lower but with SHOTS;
+            Charlotte F(ish), Fish Fillet! One flips 4 cups COMMA rest work sequentually flip 4 between!
+            `;
         } else if (name==="one-vs-five"){
             text = "1,des1v3";
         } else if (name==="two-teams"){

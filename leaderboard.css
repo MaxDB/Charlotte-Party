@@ -114,3 +114,7 @@
     background: #C1E1C1;
     border: solid #4cbb17 5px;
 }
+
+#star-audio{
+    display: none;
+}
