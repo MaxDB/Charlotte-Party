@@ -56,8 +56,7 @@ function getMinigames() {
     const minigameNames = [
         "all-vs-all",
         "one-vs-five",
-        "two-teams",
-        "three-teams"
+        "two-teams"
     ]
 
     return minigameNames.map(loadMinigames)
@@ -69,8 +68,15 @@ function loadMinigames(name) {
        // .then(response => response.text())
         //.then(text => console.log(text))
         //.catch(error => console.error("Error fetching file:", error));
-    
-        const text = ` 
+        let text
+        if (name==="all-vs-all"){
+            text = "1,descava";
+        } else if (name==="one-vs-five"){
+            text = "1,des1v3";
+        } else if (name==="two-teams"){
+            text = "1,desctwoteams";
+        } else {
+            text = ` 
             game-1, ${name} -description-1;
             game-2, ${name} -description-2;
             game-3, ${name} -description-3;
@@ -81,7 +87,8 @@ function loadMinigames(name) {
             game-8, ${name} -description-8;
             game-9, ${name} -description-9;
             game-10, ${name} -description-10
-        `
+            `
+        };
         minigameData = text.replace(/(\r\n|\r|\n| )/g,"").split(";")
             .map(game => game.split(","));
     

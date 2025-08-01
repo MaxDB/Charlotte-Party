@@ -1,4 +1,7 @@
-
+#left-section{
+    display: grid;
+    place-items: center;
+}
 
 
 #leaderboard {
